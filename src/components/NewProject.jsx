@@ -3,12 +3,14 @@ import Input from "./Input";
 export default function NewProject() {
   return (
     <div>
-      <menu>
+      <menu className="flex items-center justify-end">
         <li>
           <button>Cancel</button>
         </li>
         <li>
-          <button>Delete</button>
+          <button className="bg-stone-950 text-stone-100 p-1 rounded m-2">
+            Delete
+          </button>
         </li>
       </menu>
       <div>

@@ -1,6 +1,11 @@
+import React, { useRef } from "react";
 import Input from "./Input";
 
 export default function NewProject() {
+  const title = useRef();
+  const des = useRef();
+  const dueDate = useRef();
+
   return (
     <div>
       <menu className="flex items-center justify-end">

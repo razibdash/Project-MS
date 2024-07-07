@@ -23,7 +23,7 @@ function App() {
     content = <NoProjectSected onStartAddProject={handleStartAddProject} />;
   }
   return (
-    <main className="h-screen my-8 flex gap-8">
+    <main className="h-screen my-1 flex gap-8">
       <ProjectSidebar onStartAddProject={handleStartAddProject} />
       {content}
     </main>

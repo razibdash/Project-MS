@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Input from "./Input";
 
-export default function NewProject() {
+export default function NewProject({ onAdd }) {
   const title = useRef();
   const des = useRef();
   const dueDate = useRef();
@@ -10,6 +10,13 @@ export default function NewProject() {
     const enteredTitle = title.current.value;
     const enteredDes = des.current.value;
     const enteredDueDate = dueDate.current.value;
+
+    //validation
+    onAdd({
+      title: enteredTitle,
+      des: enteredDes,
+      dueDate: enteredDueDate,
+    });
   }
 
   const saveButton = "bg-stone-950 text-stone-100 p-1 rounded m-2";
@@ -28,7 +35,7 @@ export default function NewProject() {
       <div>
         <Input ref={title} label="title" />
         <Input ref={des} label="Description" textarea={true} />
-        <Input ref={dueDate} label="Deu Date" />
+        <Input type="date" ref={dueDate} label="Deu Date" />
       </div>
     </div>
   );

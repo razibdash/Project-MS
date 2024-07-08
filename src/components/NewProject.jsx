@@ -21,7 +21,7 @@ export default function NewProject({ onAdd }) {
 
   const saveButton = "bg-stone-950 text-stone-100 py-1 px-3 rounded m-2";
   return (
-    <div>
+    <div className="mt-10">
       <menu className="flex items-center justify-end">
         <li>
           <button>Cancel</button>

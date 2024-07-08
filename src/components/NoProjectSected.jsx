@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import no from "../assets/no.png";
 import Button from "./Button";
 

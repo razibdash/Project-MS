@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Input from "./Input";
 
+// eslint-disable-next-line react/prop-types
 export default function NewProject({ onAdd }) {
   const title = useRef();
   const des = useRef();

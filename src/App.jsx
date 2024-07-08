@@ -28,6 +28,7 @@ function App() {
       };
       return {
         ...prevState,
+        selectedProjectId: undefined,
         projects: [...projectState.projects, newProject],
       };
     });
@@ -43,7 +44,10 @@ function App() {
   console.log(projectState);
   return (
     <main className="h-screen my-1 flex gap-8">
-      <ProjectSidebar onStartAddProject={handleStartAddProject} />
+      <ProjectSidebar
+        onStartAddProject={handleStartAddProject}
+        projects={projectState.projects}
+      />
       {content}
     </main>
   );

@@ -3,7 +3,7 @@ import Input from "./Input";
 import Modal from "./Modal";
 
 // eslint-disable-next-line react/prop-types
-export default function NewProject({ onAdd }) {
+export default function NewProject({ onAdd, onCancel }) {
   const title = useRef();
   const des = useRef();
   const dueDate = useRef();
@@ -47,7 +47,7 @@ export default function NewProject({ onAdd }) {
       <div className="mt-10">
         <menu className="flex items-center justify-end">
           <li>
-            <button>Cancel</button>
+            <button onClick={onCancel}>Cancel</button>
           </li>
           <li>
             <button onClick={handleSave} className={saveButton}>
